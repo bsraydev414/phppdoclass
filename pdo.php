@@ -1,9 +1,10 @@
 class DB {
     private $db;
-    private $username = 'yoursqluser'
-    private $password = 'yoursqluserpassword';
+   
     
     public function __construct($dbname) {
+        $username = 'yoursqluser'
+        $assword = 'yoursqluserpassword';
         $dsn = "sqlsrv:Server=YOURSQLSERVERNAME;Database=$dbname";
         $this->db = new PDO($dsn, $username, $password);
         $this->db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
