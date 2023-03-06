@@ -25,8 +25,5 @@ class DB {
         $stmt = $this->query($sql, $params);
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
-
-    public function getLastInsertId() {
-        return $this->db->lastInsertId();
-    }
+  
 }
